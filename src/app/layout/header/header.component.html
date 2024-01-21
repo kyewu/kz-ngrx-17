@@ -1,0 +1,20 @@
+<div>
+  <nav
+    class="flex-1 justify-center"
+    mat-tab-nav-bar
+    mat-stretch-tabs="false"
+    mat-align-tabs="center"
+    [tabPanel]="tabPanel"
+    [backgroundColor]="background">
+    @for (link of navbarLinks; track link.label) {
+      <a
+        mat-tab-link
+        (click)="setActive(link)"
+        [active]="activeLink.url === link.url"
+        [routerLink]="link.url">
+        {{ link.label }}
+      </a>
+    }
+  </nav>
+  <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
+</div>
