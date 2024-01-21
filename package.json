@@ -6,6 +6,8 @@
     "angular 17",
     "angular template",
     "angular-template",
+    "ngrx",
+    "@ngrx/store",
     "prettier",
     "eslint"
   ],
